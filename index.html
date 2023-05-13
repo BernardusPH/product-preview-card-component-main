@@ -14,7 +14,13 @@
   <body>
     <main>
       <div class="img-container">
-        <img class="perfume" alt="product">
+
+        <picture>
+          <source media="(min-width: 800px)" srcset="./images/image-product-desktop.jpg">
+
+          <img class="perfume" src="./images/image-product-mobile.jpg">
+        </picture>
+       
       </div>
       <div class="info-container">
         <h1 > PERFUME</h1>
@@ -42,18 +48,6 @@
     Coded by <a href="https://www.frontendmentor.io/profile/BernardusPH">Berie</a>.
      </footer> 
 
-  <script>
-   function ImageChange(x) {
-  if (perfume.matches) { // If media query matches
-    document.querySelector(".perfume").src= "./images/image-product-desktop.jpg";
-  } else {
-    document.querySelector(".perfume").src="./images/image-product-mobile.jpg"
-  }
-}
-
-var perfume = window.matchMedia("(min-width: 800px)")
-ImageChange(perfume) // Call listener function at run time
-perfume.addListener(ImageChange) 
-  </script>
+  
   </body>
 </html>
